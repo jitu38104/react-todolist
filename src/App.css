@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;1,200&display=swap");
+
+:root {
+  --pure: #ffffff;
+  --dark: #000000;
+  --pink: #a569bd;
+  --gray: #566573;
+  --red: #e72c17;
+  --green: #73c6b6;
+  --bg: #f0f3f4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-hidden {
+  display: none;
+  transition: all 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display-block {
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
+.font-strike {
+  text-decoration: line-through;
+}
+.no-strike {
+  text-decoration: none;
+}
+
+#editTask {
+  width: 90%;
+  height: 2rem;
+  outline: none;
+  font-weight: 500;
+  font-size: 1.15rem;
+  padding-left: 0.5rem;
+  /* margin-right: 1rem; */
+  /* background-color: transparent; */
+  border: 1px solid var(--gray);
+  font-family: "Raleway", sans-serif;
+}
+
+#editBtn {
+  width: 5rem;
+  border: none;
+  height: 2.19rem;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+  color: var(--pure);
+  font-size: 1.15rem;
+  background-color: #008cba;
+  font-family: "Raleway", sans-serif;
+}
+
+div.container {
+  max-height: 100%;
   min-height: 100vh;
+  width: 100%;
+  padding-top: 5rem;
+  background-color: var(--bg);
+}
+
+div.container div.list-container {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0.75rem 2rem 1.5rem 2rem;
+  background-color: var(--green);
+  width: 25rem;
+  min-width: 25rem;
+  max-width: 30rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+div.container div.list-container h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 2.25rem;
+  color: #7d3c98;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.container div.list-container div.items {
+  width: 100%;
+}
+
+div.container div.list-container div.items ul {
+  list-style-type: none;
+}
+
+div.container div.list-container div.items ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+div.container div.list-container div.items ul li:last-child {
+  margin-bottom: 2.25rem;
+}
+
+div.container div.list-container div.items ul li div.task {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+}
+
+div.container
+  div.list-container
+  div.items
+  ul
+  li
+  div.task
+  input[type="checkbox"] {
+  margin-right: 1rem;
+  max-height: 2rem;
+  max-width: 2rem;
+}
+
+div.container div.list-container div.items ul li div.task h4 {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--dark);
+  margin-right: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+div.container div.list-container div.items ul li div.options {
+  flex: 0.15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.container div.list-container div.items ul li div.options img {
+  height: 1.2rem;
+  width: 1rem;
+  cursor: pointer;
+}
+
+div.container div.list-container div.input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+div.container div.list-container div.input input[type="text"] {
+  flex: 1;
+  outline: none;
+  border: none;
+  height: 2rem;
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  margin-right: 0.5rem;
+  padding: 0 0.35rem;
+  background-color: transparent;
+  border-bottom: 1px solid var(--gray);
+}
+
+div.container div.list-container div.input button {
+  box-sizing: border-box;
+  padding: 0.3rem 0.75rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: var(--pink);
+}
+
+div.container div.list-container div.input button:hover {
+  color: var(--pure);
+  background-color: #5b2c6f;
 }
